@@ -1,5 +1,8 @@
 name: Create Branch From Issue
 
+permissions:
+  contents: write
+
 on:
   issues:
     types: [opened]
@@ -9,8 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create branch from issue
-        uses: peter-evans/create-branch@v2
+      - uses: peter-evans/create-branch@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: dev
