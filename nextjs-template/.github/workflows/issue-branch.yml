@@ -1,0 +1,22 @@
+name: Create Branch From Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create branch from issue
+        uses: peter-evans/create-branch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: dev
+          branch: |
+            ${{
+              contains(github.event.issue.labels.*.name, 'bug')
+              && format('bugfix/{0}', github.event.issue.number)
+              || format('feature/{0}', github.event.issue.number)
+            }}
