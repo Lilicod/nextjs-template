@@ -3,23 +3,23 @@ description: Suggest a new feature or improvement
 title: "[FEATURE]: "
 labels: ["enhancement"]
 body:
-  - type: textarea
-    id: feature
-    attributes:
-      label: Feature Description
-      description: What do you want to add?
-    validations:
-      required: true
+    - type: textarea
+      id: feature
+      attributes:
+          label: Feature Description
+          description: What do you want to add?
+      validations:
+          required: true
 
-  - type: textarea
-    id: motivation
-    attributes:
-      label: Why is this needed?
-      description: Business or technical value
-    validations:
-      required: true
+    - type: textarea
+      id: motivation
+      attributes:
+          label: Why is this needed?
+          description: Business or technical value
+      validations:
+          required: true
 
-  - type: textarea
-    id: notes
-    attributes:
-      label: Additional Notes
+    - type: textarea
+      id: notes
+      attributes:
+          label: Additional Notes

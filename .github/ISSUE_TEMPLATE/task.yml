@@ -3,19 +3,19 @@ description: Technical task or improvement
 title: "[TASK]: "
 labels: ["task"]
 body:
-  - type: textarea
-    id: task
-    attributes:
-      label: Task Description
-      placeholder: What needs to be done?
-    validations:
-      required: true
+    - type: textarea
+      id: task
+      attributes:
+          label: Task Description
+          placeholder: What needs to be done?
+      validations:
+          required: true
 
-  - type: checkboxes
-    id: done
-    attributes:
-      label: Definition of Done
-      options:
-        - label: Code implemented
-        - label: Tested locally
-        - label: CI passed
+    - type: checkboxes
+      id: done
+      attributes:
+          label: Definition of Done
+          options:
+              - label: Code implemented
+              - label: Tested locally
+              - label: CI passed

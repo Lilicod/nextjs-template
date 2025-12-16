@@ -9,7 +9,6 @@
 //   }
 // }
 
-
 // npm install -D \
 //   eslint \
 //   eslint-config-next \
@@ -17,14 +16,18 @@
 //   eslint-config-prettier \
 //   eslint-plugin-prettier
 
-
-
 // {
 //   "lint-staged": {
 //     "*.{js,jsx}": ["eslint --fix", "prettier --write"]
 //   }
 // }
 
-
 // npm run lint
 // npm run format:check
+
+
+  // "semi": false,
+  // "singleQuote": true,
+  // "trailingComma": "es5",
+  // "printWidth": 80,
+  // "tabWidth": 2

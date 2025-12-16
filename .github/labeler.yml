@@ -1,4 +1,4 @@
 bug:
-  - 'bug/**'
+    - "bug/**"
 enhancement:
-  - 'feature/**'
+    - "feature/**"

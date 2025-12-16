@@ -1,24 +1,24 @@
 name: Create Branch From Issue
 
 permissions:
-  contents: write
+    contents: write
 
 on:
-  issues:
-    types: [opened]
+    issues:
+        types: [opened]
 
 jobs:
-  create-branch:
-    runs-on: ubuntu-latest
+    create-branch:
+        runs-on: ubuntu-latest
 
-    steps:
-      - uses: peter-evans/create-branch@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: dev
-          branch: |
-            ${{
-              contains(github.event.issue.labels.*.name, 'bug')
-              && format('bugfix/{0}', github.event.issue.number)
-              || format('feature/{0}', github.event.issue.number)
-            }}
+        steps:
+            - uses: peter-evans/create-branch@v2
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  base: dev
+                  branch: |
+                      ${{
+                        contains(github.event.issue.labels.*.name, 'bug')
+                        && format('bugfix/{0}', github.event.issue.number)
+                        || format('feature/{0}', github.event.issue.number)
+                      }}
