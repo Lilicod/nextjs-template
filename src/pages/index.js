@@ -1,8 +1,4 @@
-
-
 export default function Home() {
-    const test="hello"
-    return (
-       <>HELLO WORLD</>
-    );
+    const test = "hello";
+    return <>HELLO WORLD</>;
 }
